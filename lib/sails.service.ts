@@ -298,11 +298,7 @@ export class SailsService {
                         error: jwres.error
                     })
                 } else {
-                    this.zone.run(() => subject.next({
-                        data: resData,
-                        statusCode: jwres.statusCode,
-                        response: jwres
-                    }));
+                    this.zone.run(() => subject.next(resData));
                 }
                 subject.complete();
             })
@@ -333,11 +329,7 @@ export class SailsService {
                         error: jwres.error
                     })
                 } else {
-                    this.zone.run(() => subject.next({
-                        data: resData,
-                        statusCode: jwres.statusCode,
-                        response: jwres
-                    }));
+                    this.zone.run(() => subject.next(resData));
                 }
                 subject.complete();
             })
@@ -370,11 +362,7 @@ export class SailsService {
                         error: jwres.error
                     })
                 } else {
-                    this.zone.run(() => subject.next({
-                        data: resData,
-                        statusCode: jwres.statusCode,
-                        response: jwres
-                    }));
+                    this.zone.run(() => subject.next(resData));
                 }
                 subject.complete();
             })
@@ -407,11 +395,7 @@ export class SailsService {
                     })
                 } else {
                     //subject.next(resData);
-                    this.zone.run(() => subject.next({
-                        data: resData,
-                        statusCode: jwres.statusCode,
-                        response: jwres
-                    }));
+                    this.zone.run(() => subject.next(resData));
                 }
                 subject.complete();
             })
